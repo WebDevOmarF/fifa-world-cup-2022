@@ -29,6 +29,7 @@ li{
     list-style: none;
 }
 button,.button{
+    border: 0;
     border-radius: 5px;
     font-size: 1.4vw;
     font-weight: 400;
@@ -38,7 +39,7 @@ button,.button{
 }
 
 /* ---------- banner style -------- */
-.banner{
+header .banner{
     background-color: var(--bg-back);
     display: flex;
     align-items: center;
@@ -51,26 +52,24 @@ button,.button{
     width: 50%;
 }
 .banner .banner-left h1{
-    font-size: 4.5vw;
+    font-size: 4.2vw;
     line-height: 5vw;
 }
 .banner .banner-left p{
     color: var(--white);
     margin:3% 0 4%;
 }
-.banner .banner-image{
-    /* width: 500px; */
-}
-.banner .banner-image img{
+.banner .banner-right .banner-image img{
     width: 100%;
     padding: 0;
     padding-top: 33px;
 }
-/* ----------- side/Nav bar style ------------- */
+/* -------- main & side/Nav bar style ----------- */
 main{
     margin:50px 5% 0;
     display: flex;
 }
+
 nav.sidebar{
     display: inline-block;
     width: 312px;
@@ -87,11 +86,6 @@ nav.sidebar{
     text-align: center;
     border-radius: 10px;
 }
-.sidebar ul li a{
-    color: #161616;
-    font-weight: 600;
-    /* font-size: 2vw; */
-}
 
 .sidebar ul li.active {
     background-color:#e74c3c;
@@ -99,7 +93,12 @@ nav.sidebar{
 .sidebar ul li.active a{
     color: var(--white);
 }
-
+.sidebar ul li a{
+    color: #161616;
+    font-weight: 600;
+    /* font-size: 2vw; */
+}
+/* ----------- article section style ----------- */
 section.content{
     width:calc(100% - 312px);
     display: grid;
@@ -110,6 +109,9 @@ article{
     border: 1px solid #E8E8E8;
     border-radius: 15px;
 
+}
+article img{
+    width: 100%;
 }
 article .art-desc{
     padding: 20px;
@@ -127,15 +129,57 @@ article .art-desc h3{
     line-height: 25px;
     margin-bottom: 20px;
 }
-article img{
-    width: 100%;
-}
 .time-comm span{
     margin-right: 10px;
 }
 .time-comm time{
     margin-right: 30px;
 }
+
+a.button.view{
+    display: none;
+}
+
+/* ------ upcoming page style ------- */
+.upcoming {
+    width:calc(100% - 312px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    grid-gap: 20px;
+}
+.upcoming-box {
+    border-radius: 10px;
+    border: 1px solid #E8E8E8;
+    justify-content: center;
+    padding: 18% 10%;
+}
+
+.vs-flag {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4%;
+}
+.vs-flag img{
+    width: 100%;
+}
+.vs-flag h4{
+    font-size: 2vw;
+}
+.upcoming-match-des{
+    text-align: center;
+}
+.upcoming-match-des h3{
+    padding: 9% 0 4.5%;
+    font-size: 1.45vw;
+}
+.upcoming-match-des .date{
+    font-size: 1.15vw;
+    align-items: center;
+}
+
 
 
 /* ------ footer style --------- */
@@ -151,24 +195,16 @@ footer h3{
     padding: 10% 0 4%;
 }
 footer ul{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(150px,180px)) ;
-    justify-content: center;
-    padding: 4% 12% 10%; 
-    align-items: center;
-    /* display: grid; */
-    margin: 0 auto;
-    text-align: center;
-    /* grid-template-columns: repeat(2, 1fr); */
+    display:flex;
+    justify-content:center;
+    padding: 4% 15% 10%; 
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 20px ;
 }
 footer hr{
     border: 1px solid rgba(255, 255, 255, 0.1);
     margin:0 6%;
-}
-footer ul li {
-    border: solid;
-    /* min-width:200px; */
-    /* padding: 10% 0 4%; */
 }
 footer ul li a{
     font-size: 16px;

@@ -1,8 +1,5 @@
-
-
+/* ----- responsive for tablet ---- */
 @media only screen and (max-width:834px){
-    body{
-    }
     nav.sidebar{
         width: 100%;
         height: auto;
@@ -21,29 +18,35 @@
         margin: 0;
         border: solid 1px gray;
     }
-    section.content{
+    section.content , .upcoming{
         width:100%;
         grid-template-columns: repeat(2,1fr);
     }
+    .upcoming-match-des h3{
+        font-size: 2.45vw;
+    }
+    .upcoming-match-des .date{
+        font-size: 1.75vw;
+    }
 }
+/* ----- responsive for oly tablet ---- */
 @media only screen and (max-width:834px) and (min-width:376px){
     .hide-tablet{
         display: none;
     }
-    /* .button{
+    a.button.view {
         display: inline-block;
         position: relative;
         left: 50%;
-    } */
-    .view-btn{
-        /* margin: 0 auto; */
-    }
-    
+        margin-top: 30px;
+        font-size: 18px;
+        transform: translate(-50%);
+      }
 }
+/* ----- responsive for Mobile ---- */
+
 @media only screen and (max-width:375px){
-    body{
-        /* padding: 44px 20px 0px 20px; */
-    }
+    
     .banner{
         flex-direction: column;
         gap: 0;
@@ -86,15 +89,21 @@
         min-width: 170px;
         padding: 12px 30px;
     }
-    /* .sidebar ul li{
-    } */
-    section.content{
+    .upcoming-match-des h3{
+        font-size: 5vw;
+    }
+    .upcoming-match-des .date{
+        font-size: 3.75vw;
+    }
+    
+    section.content, .upcoming{
         width:100%;
         display: flex;
         flex-direction: column;
     }
     footer ul{
         flex-direction: column;
+        gap: 1px;
     }
     footer ul li{
         text-align: center;
