@@ -74,8 +74,12 @@
    }
    
     .banner .banner-image{
-        padding: 21px 33px 0px 63px;
+        padding:0;
     }
+    
+.banner .banner-right .banner-image img{
+    padding-top: 13px;
+}
     .banner .banner-image img{
         padding: 0;
     }
