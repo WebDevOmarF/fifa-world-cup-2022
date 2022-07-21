@@ -64,6 +64,16 @@ header .banner{
     width: 100%;
     padding: 0;
     padding-top: 33px;
+    animation: banner-image infinite 15s ;
+}
+@keyframes banner-image {
+    0%,100%{ 
+        transform: rotate(-2deg);transform-origin: left bottom;
+        border-top-right-radius: 100px;
+    }
+    50%{ 
+        transform: rotate(-4deg);transform-origin: left bottom;
+    }
 }
 .banner .banner-left h1{
     /* animation: top-bottom  inherit  15s .2s; */
