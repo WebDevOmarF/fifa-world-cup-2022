@@ -65,7 +65,43 @@ header .banner{
     padding: 0;
     padding-top: 33px;
 }
-/* -------- main & side/Nav bar style ----------- */
+.banner .banner-left h1{
+    /* animation: top-bottom  inherit  15s .2s; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: top-bottom  infinite  15s .1s;
+}
+.banner .banner-left p{
+    animation: top-bottom  infinite  15s .1s;
+}
+.banner .banner-left button{
+    animation:top-bottom  infinite  15s ;
+}
+  
+  @keyframes top-bottom {
+    0%{
+        position: relative;
+        top: 0;
+    }10%{
+        position: relative;
+        top: 30px;
+        color: #161616;
+        background-color: #161616;
+    }
+    20%{ 
+        position: relative;
+        top: 30px;
+        color: #161616;
+        background-color: #161616;
+    }
+    30%{ 
+        position: relative;
+        top: 0px;
+    }
+    100%{ 
+        position: relative;
+        top: 0px;
+    }
+}
 main{
     margin:50px 5% 0;
     display: flex;
